@@ -1,0 +1,13 @@
+<div class="form">
+  <form #formUsuario="ngForm" (ngSubmit)="onSubmit(formUsuario)">
+    <fieldset>
+      <legend>Añadir un amigo</legend>
+      <label>Nombre:</label>
+      <input type="text" name="name" placeholder="Nombre del usuario" #nombre="ngModel" [(ngModel)]="user.name" required
+             pattern="[a-zA-Z]+"/>
+      <span *ngIf="nombre.touched && !nombre.valid">El nombre no es correcto</span>
+      <input type="submit" value="Añadir" [disabled]="!formUsuario.form.valid"/>
+    </fieldset>
+  </form>
+</div>
+

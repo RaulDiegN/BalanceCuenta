@@ -1,0 +1,33 @@
+div.main-wrapper {
+  display: grid;
+  background-color: #eee;
+  grid-auto-columns: 25%;
+}
+
+div.titulo {
+  justify-items: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  place-content: center center;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-transform: uppercase;
+  justify-content: center;
+  margin-left: 160px;
+}
+
+div.balance {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+div.cargo {
+  border: 2px solid rgb(54, 35, 0);
+  margin: 3px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: white;
+}

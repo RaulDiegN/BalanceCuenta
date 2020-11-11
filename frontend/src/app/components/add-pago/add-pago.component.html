@@ -1,0 +1,31 @@
+<div class="form">
+  <form #formPago="ngForm" (ngSubmit)="onSubmit(formPago)">
+    <fieldset>
+      <div class="nombre">
+        <label>Nombre:</label>
+        <input type="text" name="name" placeholder="Nombre del usuario" #nombre="ngModel" [(ngModel)]="pago.name_user"
+               required pattern="[a-zA-Z]+"/>
+        <span *ngIf="nombre.touched && !nombre.valid">El nombre no es correcto</span>
+      </div>
+      <div class="importe">
+        <label>Importe:</label>
+        <input type="text" name="importe" placeholder="Importe del cargo" #importe="ngModel" [(ngModel)]="pago.importe"
+               required/>
+      </div>
+      <div class="descripcionLabel">
+        <label>Descripcion:</label>
+      </div>
+      <div class="descripcion">
+        <textarea name="descripcion" cols="30" rows="10" placeholder="Descripcion del cargo" #descripcion="ngModel"
+                  [(ngModel)]="pago.descripcion" required></textarea>
+      </div>
+      <div class="fecha">
+        <label>Fecha:</label>
+        <input type="date" name="fecha" placeholder="Fecha" #fecha="ngModel" [(ngModel)]="pago.fecha" required/>
+      </div>
+      <div class="button">
+        <input type="submit" value="Añadir" [disabled]="!formPago.form.valid"/>
+      </div>
+    </fieldset>
+  </form>
+</div>

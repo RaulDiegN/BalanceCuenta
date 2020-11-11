@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #097FDB;
+}
+
+div.titulo {
+  margin-left: 50px;
+}
+
+h1.titulo {
+  color: rgba(182, 219, 18, 0.993);
+}
+
+.menu {
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 14px 16px;
+  border-radius: 5px;
+}
+
+a.primero {
+  margin-left: 600px;
+}
+
+a.active {
+  background-color: #eee;
+  color: black;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}

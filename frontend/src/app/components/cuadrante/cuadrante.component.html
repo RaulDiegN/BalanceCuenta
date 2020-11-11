@@ -1,0 +1,10 @@
+<div class="main-wrapper">
+  <div class="titulo">
+    <h1>Cuadrante total</h1>
+  </div>
+  <div class="balance" *ngFor="let pago of cuadrante">
+    <div class="cargo">
+      <p>{{pago.nombreEmisor}} -> {{pago.nombreReceptor}} ({{pago.pago}}€)</p>
+    </div>
+  </div>
+</div>

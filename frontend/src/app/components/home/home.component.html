@@ -1,0 +1,16 @@
+<div class="main-wrapper">
+  <div class="titulo">
+    <h1>Cargos Realizados</h1>
+  </div>
+  <div class="balance" *ngFor="let pago of pagos">
+    <div class="cargo">
+      <p><strong>Nombre:</strong>{{pago.name_user}} </p>
+      <p><strong>Importe:</strong> {{pago.importe}}€</p>
+      <p><strong>Descripción: </strong>{{pago.descripcion}}</p>
+      <p><strong>Fecha: </strong>{{pago.fecha}}</p>
+    </div>
+  </div>
+  <div class="button">
+    <button class="pago" (click)="redirigir()">Añadir Cargo</button>
+  </div>
+</div>
